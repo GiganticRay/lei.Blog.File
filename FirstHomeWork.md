@@ -28,4 +28,4 @@ mpicc hello.c -o hello
 srun -n 3 hello
 ```
 > 结果如下图所示，但是按道理来说应该是0 of 2, 1 of 2, 2 of 2啊，为啥是3个 0 of 1 呢，奇怪
-![nfs配置成功后运行srun[(https://github.com/GiganticRay/lei.Blog.File/blob/master/Picture/FirstHomeWork/slurm_srun_%E9%85%8D%E7%BD%AEnfs.jpg "成功配置nfs")
+![nfs配置成功后运行srun](https://github.com/GiganticRay/lei.Blog.File/blob/master/Picture/FirstHomeWork/slurm_srun_%E9%85%8D%E7%BD%AEnfs.jpg "成功配置nfs")
