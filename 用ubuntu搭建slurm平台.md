@@ -1,7 +1,8 @@
 ---
 title: 用ubuntu搭建slurm平台
 date: 2020-07-13 16:31:58
-tags:
+tags: 工具
+categories: 工具
 ---
 ### 机器配置(注：我是基于[zxh](http://blog.zxh.site/)的博客，以及[官方文档](https://slurm.schedmd.com/quickstart_admin.html)针对ubuntu进行配置的)
 > 两台ubuntu的虚拟机，一台作为master(2核心)，一台作为slave(1核心)

@@ -1,7 +1,8 @@
 ---
 title: FirstHomeWork
 date: 2020-07-14 19:42:06
-tags:
+tags: 并行计算
+categories: 新竹清华大学作业
 ---
 
 # 作业描述：新竹清华大学，周志远老师的并行计算课程，[作业一](http://lms.nthu.edu.tw/course.php?courseID=35305&f=hw&hw=168455)

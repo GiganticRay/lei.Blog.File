@@ -1,7 +1,8 @@
 ---
 title: git的核心理念与基本操作(基本)
 date: 2020-07-12 07:11:18
-tags:
+tags: 工具
+categories: 工具
 ---
 
 * ### git上文件的状态
