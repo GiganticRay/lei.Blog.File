@@ -3,8 +3,9 @@ title: SVD A=UΣV^T to compress a Picture(奇异值分解)进行图片压缩
 date: 2020-07-22 18:04:14
 tags: Linear Algebra
 categories: Linear Algebra
+---
 
-### 奇异值分解：A=UΣV^T, 其中，U是AA^T的特征向量，Σ^2是AA^T的特征值，V是A^TA的特征向量，目的即将图片weights x heights分解为矩阵表达，这样存储时仅仅存储矩阵表达即可，从而达到压缩的效果。代码如下：
+### 1. 奇异值分解：A=UΣV^T, 其中，U是AA^T的特征向量，Σ^2是AA^T的特征值，V是A^TA的特征向量，目的即将图片weights x heights分解为矩阵表达，这样存储时仅仅存储矩阵表达即可，从而达到压缩的效果。代码如下所示。
 ```python
 import numpy as np
 from PIL import Image
@@ -15,7 +16,7 @@ if __name__ == "__main__":
     # 1. 加载图片成width x height的数组A
     # 2. 计算A^TA，算出其lambda^2, lambda是SIGMA, 对应特征向量是V1，V2；再根据(1):解AA^T的eigen vector作为U；（2）或者解AV/SIGMA得出U。
     # 3. 从大到小排列SIGMA以及对应U，V得出分解内容。
-    # 4. 根据
+    # 4. 分析结论
 
     # 1. 得出矩阵A_TA
     Img = Image.open('./test.jpg')
@@ -52,7 +53,9 @@ if __name__ == "__main__":
     print("good luck")
 
 ```
-### 左为原图，右为重构图
-![SVD_Sample_Pic](src "SVD_Sample_Pic")
+### 2. 左为重构，右为原图
+![SVD_Sample_Pic](https://raw.githubusercontent.com/GiganticRay/lei.Blog.File/master/Picture/SVD/SVD%E4%BB%A3%E7%A0%81%E6%95%88%E6%9E%9C%E7%A4%BA%E4%BE%8B%E5%9B%BE.jpg "SVD_Sample_Pic")
 
+### 3. 结果说明
+> 原图大小是 1980*2640*3(带color channel)，现经过SVD压缩为了(1257*(1980+2640)*3)`(代码中为了简单表明过程，只计算了一个color channel上的)`。上述例子表明，在保存图片信息99%的情况下，压缩率为90%。
 ---
