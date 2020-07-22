@@ -49,7 +49,7 @@ if __name__ == "__main__":
 
     reConstructImg = Image.fromarray(reConstructImgArray)
     reConstructImg.show()
-    # 结果为i=44, 即压缩为了1257*(1980+2640), 原图是1980*2640, 这样压缩保留了99%的信息
+    # 结果为i=1257, 即压缩为了1257*(1980+2640), 原图是1980*2640, 这样压缩保留了99%的信息
     print("good luck")
 
 ```
