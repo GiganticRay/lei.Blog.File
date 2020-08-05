@@ -36,13 +36,14 @@ categories: Linear Algebra
 > ![basisTransformation2][4]
 > ![basisTransformation3][5]
 
++ 如何选择**好的基**，使得该变换T在这组input basis与output basis下的矩阵表示比较简单？
+> 待续...
 
 
 
 
-
-[1]: http "坐标与基"
-[2]: http "决定变换矩阵A的三要素"
-[3]: http "basisTransformation1"
-[4]: http "basisTransformation2"
-[5]: http "basisTransformation3"
+[1]: https://raw.githubusercontent.com/GiganticRay/lei.Blog.File/master/Picture/Linear_Transformation/%E5%9D%90%E6%A0%87%E4%B8%8E%E5%9F%BA.png "坐标与基"
+[2]: https://raw.githubusercontent.com/GiganticRay/lei.Blog.File/master/Picture/Linear_Transformation/%E5%86%B3%E5%AE%9A%E5%8F%98%E6%8D%A2%E7%9F%A9%E9%98%B5A%E7%9A%84%E4%B8%89%E8%A6%81%E7%B4%A0.png "决定变换矩阵A的三要素"
+[3]: https://raw.githubusercontent.com/GiganticRay/lei.Blog.File/master/Picture/Linear_Transformation/basisTransformation1.png "basisTransformation1"
+[4]: https://raw.githubusercontent.com/GiganticRay/lei.Blog.File/master/Picture/Linear_Transformation/basisTransformation2.png "basisTransformation2"
+[5]: https://raw.githubusercontent.com/GiganticRay/lei.Blog.File/master/Picture/Linear_Transformation/basisTransformation3.png "basisTransformation3"
