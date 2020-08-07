@@ -5,6 +5,9 @@ tags: ML
 categories: ML
 ---
 参考书籍：《统计学习方法》
+
+参考网络资源：[信息增益比](https://blog.csdn.net/m0_38024592/article/details/82317369)details/82317369
+
 ## 熵的意义
 > 书中P60描述，熵是表示随机变量**不确定性**的度量。that's right，经常看见什么：“宇宙是熵增的”这种句子，实际上是在说，宇宙的发展过程，是慢慢从有序的状态，发展至无序的状态。这里熵的定义，就不难理解了，一个随机变量**越随机**，它的熵就**越大**。聪明的Rudolf Clausius归纳了这样一个表达式（将可见的现象，用抽象的数学公式表达出来，厉害）
 ![熵的定义表达式][1]
@@ -22,8 +25,18 @@ categories: ML
 > 信息增益就很简单啦，集合D的个体，有很多个特征，特征A对训练数据D的信息增益即：“集合D原来的熵、减去已知A的分布后集合D的熵”
 ![信息增益的定义表达式][3]
 
+## 信息增益比
+>决策树对应有几个经典的算法，区别就是他们采用的计算**“信息增益”**的方式不一样，c4.5采用的就是信息增益比的方式。
+
+>这里我们要承认一点：信息增益的方法，存在偏向于选择取值较多的特征的问题。如[上文](https://blog.csdn.net/m0_38024592/article/details/82317369)的例子中，如果以日期作为候选特征，那么它的信息增益很大（一想就通嘛，每天一个日期，就分出来了一个分支，分支下只有一个样本，那肯定是有序的啊），但是很明显，这样划分并没有什么用。造成这个的原因就是： **日期这个特征，可选择的取值较多**。
+
+> 解决办法：**增加一个惩罚项**。通常来说，增加一个惩罚项是用加法嘛，比如取值越多的特征，就给其信息增益减去一个数值。信息增益比这里用了除法。
+
+> 惩罚原则：首先还是要保持**要选择能够增益信息较大的特征**，同时**特征可选择的值越多，那么惩罚越大**，把惩罚放到分母上，即**分母越小**。惩罚项是**“A的内部信息(intrinsic information of an attribution)”**，在我看来，这个惩罚项可以用D关于A的条件熵来替代吧，因为A的可取值选择越多、理应H(D|A)越小（即在A的帮助下D变得不再凌乱了）。或许只是H(D|A)计算麻烦才没有使用罢了。
 
 
-[1]: http "熵的定义表达式"
-[2]: http "条件熵的定义表达式"
-[3]: http "信息增益的定义表达式"
+
+
+[1]: https://raw.githubusercontent.com/GiganticRay/lei.Blog.File/master/Picture/something-about-%E5%86%B3%E7%AD%96%E6%A0%91-%E7%86%B5/%E7%86%B5%E7%9A%84%E5%AE%9A%E4%B9%89%E8%A1%A8%E8%BE%BE%E5%BC%8F.png "熵的定义表达式"
+[2]: https://raw.githubusercontent.com/GiganticRay/lei.Blog.File/master/Picture/something-about-%E5%86%B3%E7%AD%96%E6%A0%91-%E7%86%B5/%E6%9D%A1%E4%BB%B6%E7%86%B5%E7%9A%84%E5%AE%9A%E4%B9%89%E8%A1%A8%E8%BE%BE%E5%BC%8F.png "条件熵的定义表达式"
+[3]: https://raw.githubusercontent.com/GiganticRay/lei.Blog.File/master/Picture/something-about-%E5%86%B3%E7%AD%96%E6%A0%91-%E7%86%B5/%E4%BF%A1%E6%81%AF%E5%A2%9E%E7%9B%8A%E8%A1%A8%E8%BE%BE%E5%BC%8F.png "信息增益的定义表达式"
