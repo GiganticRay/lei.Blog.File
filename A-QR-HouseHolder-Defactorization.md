@@ -70,6 +70,9 @@ categories: Linear Algebra
 
 > 所以，Q是我们想要的Q(Orthonomal)。分解成功！
 
+# Pseudo Code
+![Householder_pseudoCode][15]
+
 
 
 [1]: https://raw.githubusercontent.com/GiganticRay/lei.Blog.File/master/Picture/A%3DQR-HouseHolder/HouseholderMatrix%E7%9A%84%E5%87%A0%E4%BD%95%E8%A1%A8%E7%A4%BA.png "HouseholderMatrix的几何表示"
@@ -86,3 +89,4 @@ categories: Linear Algebra
 [12]: https://raw.githubusercontent.com/GiganticRay/lei.Blog.File/master/Picture/A%3DQR-HouseHolder/1.23.1.png "1.23.1"
 [13]: https://raw.githubusercontent.com/GiganticRay/lei.Blog.File/master/Picture/A%3DQR-HouseHolder/1.23.2.png "1.23.2"
 [14]: https://raw.githubusercontent.com/GiganticRay/lei.Blog.File/master/Picture/A%3DQR-HouseHolder/1.23.3.png "1.23.3"
+[15]: https://raw.githubusercontent.com/GiganticRay/lei.Blog.File/master/Picture/A%3DQR-HouseHolder/Householder_pseudoCode.png "Householder_pseudoCode"
